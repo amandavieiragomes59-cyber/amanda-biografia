@@ -1,0 +1,795 @@
+/* CONTROLE GERAL DAS IMAGENS */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background:
+        radial-gradient(circle at top, #101d52, #030817 55%, #01040d);
+    color: #e8eeff;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(2, 8, 25, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #2578ff;
+}
+
+nav {
+    max-width: 1250px;
+    margin: auto;
+    padding: 15px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav h2 {
+    color: #ffffff;
+    font-size: 22px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #bcd2ff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px #2687ff;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    max-width: 1250px;
+    min-height: 500px;
+    margin: 30px auto;
+    padding: 60px 50px;
+
+    display: flex;
+    align-items: center;
+    gap: 70px;
+
+    border: 1px solid #297fff;
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(13, 29, 77, 0.95),
+            rgba(3, 9, 29, 0.95)
+        );
+
+    box-shadow:
+        0 0 25px rgba(25, 119, 255, 0.2),
+        inset 0 0 30px rgba(30, 100, 255, 0.08);
+}
+
+
+/* FOTO PRINCIPAL */
+
+
+.foto-container {
+    width: 100px;
+    height: 100px;
+    max-width: 100%;
+    border-radius: 50%;
+    padding: 4px;
+    border: 2px solid #3b8dff;
+    box-shadow: 0 0 20px #1c73ff;
+    flex-shrink: 0;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+}
+
+.foto-container img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+/* TEXTO HERO */
+
+.hero-text span {
+    color: #76b3ff;
+    font-size: 18px;
+}
+
+.hero-text h1 {
+    margin: 8px 0;
+
+    font-size: 55px;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 10px #388cff,
+        0 0 25px rgba(41, 130, 255, 0.5);
+}
+
+.hero-text h2 {
+    color: #b7cfff;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    max-width: 650px;
+    line-height: 1.8;
+    color: #c4d2ee;
+}
+
+
+/* BOTÕES */
+
+.botao {
+    display: inline-block;
+
+    margin-top: 25px;
+    padding: 12px 25px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: linear-gradient(90deg, #1465ff, #328eff);
+
+    color: white;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    box-shadow: 0 0 15px rgba(31, 126, 255, 0.5);
+
+    transition: 0.3s;
+}
+
+.botao:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px #2383ff;
+}
+
+
+/* =========================
+   SEÇÕES
+========================= */
+
+.secao {
+    max-width: 1250px;
+    margin: 35px auto;
+    padding: 30px 25px;
+}
+
+.titulo-secao {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+.titulo-secao span {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #1169ff;
+
+    box-shadow: 0 0 15px #1476ff;
+
+    font-weight: bold;
+}
+
+.titulo-secao h2 {
+    color: #dce8ff;
+}
+
+
+/* =========================
+   SOBRE
+========================= */
+
+.sobre-card {
+    display: flex;
+    gap: 35px;
+
+    padding: 30px;
+
+    border: 1px solid #257cff;
+    border-radius: 18px;
+
+    background: rgba(5, 15, 42, 0.8);
+
+    box-shadow: 0 0 20px rgba(27, 115, 255, 0.15);
+}
+
+.sobre-texto {
+    flex: 1;
+}
+
+.sobre-texto h3 {
+    color: #8ec0ff;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.sobre-texto p {
+    color: #c6d2e9;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+
+/* FOTO SOBRE */
+
+.foto-sobre {
+    width: 180px;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.foto-sobre img {
+    clip-path: circle(50%);
+}
+
+.foto-sobre img {
+    display: block;
+    width: 12px;
+    height: 12px;
+    max-width: 100%;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #388dff;
+    box-shadow: 0 0 25px #126cff;
+}
+
+.foto-sobre p {
+    margin-top: 10px;
+    color: #9db8df;
+    font-style: italic;
+}
+
+
+/* =========================
+   HABILIDADES
+========================= */
+
+.subtitulo {
+    text-align: center;
+    color: #cfe0ff;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.cards-habilidades {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.skill {
+    padding: 25px;
+
+    text-align: center;
+
+    border: 1px solid #216fff;
+    border-radius: 15px;
+
+    background: linear-gradient(
+        145deg,
+        #091943,
+        #030a20
+    );
+
+    transition: 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 0 20px rgba(31, 123, 255, 0.5);
+}
+
+.icone {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.skill h3 {
+    color: white;
+    margin-bottom: 8px;
+}
+
+.skill p {
+    color: #91b5e7;
+}
+
+
+/* =========================
+   LINHA DO TEMPO
+========================= */
+
+.timeline {
+    padding: 20px;
+
+    border: 1px solid #247bff;
+    border-radius: 18px;
+
+    background: rgba(3, 11, 34, 0.8);
+}
+
+.timeline-item {
+    display: grid;
+
+    grid-template-columns: 100px 30px 1fr;
+
+    align-items: center;
+
+    min-height: 90px;
+}
+
+.ano {
+    color: #70b2ff;
+    font-weight: bold;
+    text-align: right;
+}
+
+.linha {
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: #0874ff;
+
+    box-shadow: 0 0 15px #1682ff;
+
+    margin-left: 6px;
+}
+
+.timeline-conteudo {
+    border-left: 1px solid #195aa9;
+    padding-left: 20px;
+}
+
+.timeline-conteudo h3 {
+    color: #ffffff;
+}
+
+.timeline-conteudo p {
+    color: #9eb4d6;
+    margin-top: 5px;
+}
+
+
+/* =========================
+   SONHOS
+========================= */
+
+.sonhos-card {
+    padding: 35px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            140deg,
+            rgba(21, 49, 119, 0.8),
+            rgba(3, 10, 31, 0.95)
+        );
+
+    border: 1px solid #3488ff;
+
+    box-shadow: 0 0 25px rgba(31, 120, 255, 0.2);
+}
+
+.sonhos-card h3 {
+    font-size: 35px;
+    font-style: italic;
+    color: #dbe8ff;
+
+    margin-bottom: 20px;
+}
+
+.sonhos-card ul {
+    list-style: none;
+}
+
+.sonhos-card li {
+    padding: 9px 0;
+    color: #c7d8f5;
+}
+
+.frase {
+    margin-top: 25px;
+
+    text-align: center;
+
+    font-style: italic;
+
+    color: #a8c8ff;
+}
+
+
+/* =========================
+   QUIZ
+========================= */
+
+.quiz-card {
+    max-width: 700px;
+    margin: auto;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    border: 1px solid #287dff;
+
+    background: #050e2c;
+
+    box-shadow: 0 0 25px rgba(25, 117, 255, 0.2);
+}
+
+#numero-pergunta {
+    color: #8bbaff;
+}
+
+.barra {
+    height: 8px;
+
+    margin: 15px 0 25px;
+
+    background: #15274e;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+#progresso {
+    width: 20%;
+    height: 100%;
+
+    background: #1680ff;
+
+    transition: 0.4s;
+}
+
+.quiz-card h3 {
+    margin-bottom: 20px;
+}
+
+.opcoes {
+    display: grid;
+    gap: 10px;
+}
+
+.opcoes button {
+    padding: 12px;
+
+    text-align: left;
+
+    border: 1px solid #245da8;
+
+    border-radius: 8px;
+
+    background: #081943;
+
+    color: #dce8ff;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.opcoes button:hover {
+    background: #1266d9;
+}
+
+.opcoes button.selecionada {
+    background: #1477ff;
+}
+
+.quiz-botao {
+    border: none;
+}
+
+#resultado {
+    margin-top: 15px;
+    color: #8dbbff;
+}
+
+
+/* =========================
+   CURIOSIDADES
+========================= */
+
+.curiosidade-card {
+    max-width: 650px;
+
+    margin: auto;
+
+    padding: 30px;
+
+    text-align: center;
+
+    border: 1px solid #277eff;
+    border-radius: 18px;
+
+    background: #050e2b;
+}
+
+.curiosidade-card h3 {
+    color: #a9ccff;
+
+    font-size: 25px;
+
+    margin-bottom: 20px;
+}
+
+.curiosidade-card p {
+    color: #c6d5ee;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   CONTATO
+========================= */
+
+.contato-card {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px;
+
+    padding: 35px;
+
+    border: 1px solid #277dff;
+
+    border-radius: 18px;
+
+    background: #040c26;
+}
+
+.contato-card h3 {
+    font-size: 30px;
+    color: #d9e7ff;
+    margin-bottom: 15px;
+}
+
+.contato-card p {
+    color: #9db6dd;
+    line-height: 1.7;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+input,
+textarea {
+    width: 100%;
+
+    padding: 13px;
+
+    border-radius: 7px;
+
+    border: 1px solid #266ac5;
+
+    outline: none;
+
+    background: #07153a;
+
+    color: white;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+form button {
+    padding: 13px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #1474ff;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #3990ff;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 35px;
+
+    color: #9ebeff;
+
+    border-top: 1px solid #1b58a8;
+}
+
+
+/* =========================
+   CORAÇÃO FLUTUANTE
+========================= */
+
+.coracao-flutuante {
+    position: fixed;
+
+    bottom: 30px;
+    right: 30px;
+
+    color: white;
+
+    font-size: 30px;
+
+    animation: flutuar 2s infinite ease-in-out;
+
+    text-shadow: 0 0 15px #3e8fff;
+
+    z-index: 10;
+}
+
+@keyframes flutuar {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 850px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 38px;
+    }
+
+    .sobre-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .foto-sobre {
+        width: 100%;
+        margin: auto;
+    }
+
+    .foto-sobre img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .cards-habilidades {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contato-card {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .cards-habilidades {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        margin: 15px;
+    }
+
+    .foto-container {
+        width: 100px;
+        height: 100px;
+    }
+
+    .timeline-item {
+        grid-template-columns: 70px 25px 1fr;
+    }
+
+}
+.foto-container {
+    width: 100px !important;
+    height: 100px !important;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 20px auto;
+}
+
+.foto-container img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100px !important;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
